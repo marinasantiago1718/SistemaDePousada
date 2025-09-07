@@ -41,6 +41,11 @@ public class RoomManager implements IRoomManager {
 
 
     @Override
+    public void listAvailableRooms() {
+
+    }
+
+    @Override
     public String checkAvailability(int roomNumber) {
      Room room = rooms.get(roomNumber);
      if(room.getStatus().equals("Available")){

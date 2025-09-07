@@ -19,6 +19,8 @@ public class Reservation {
         this.arrivalDate = arrivalDate;
     }
 
+
+
     public float calcularValor() {
         Duration duration = Duration.between(arrivalDate, departureDate);
         return room.getDailyPrice()*(duration.toHours()/24f);

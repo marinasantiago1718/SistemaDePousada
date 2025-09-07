@@ -1,4 +1,6 @@
 public interface IRoomManager {
+    void listAvaiableRooms();
+
     void listAvailableRooms();
 
     String checkAvailability(int roomNumber);
