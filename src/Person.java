@@ -3,7 +3,7 @@ public abstract class Person {
     private String phoneNumber;
     private String CPF;
     private String email;
-    private String endereço;
+    private String endereco;
 
 
 
@@ -39,7 +39,11 @@ public abstract class Person {
         this.email = email;
     }
 
-    public void setEndereco(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getEndereco() {
+        return this.endereco;
     }
 }
