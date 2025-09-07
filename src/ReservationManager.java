@@ -16,7 +16,12 @@ public class ReservationManager implements IReservationManager {
     }
 
     public void updateRoomStatus(int roomNumber) {
-        roomManager.getRooms().get(roomNumber).setStatus(!roomManager.getRooms().get(roomNumber).isStatus());
+        if(roomManager.getRooms().get(roomNumber).getStatus().equals("Available")){
+            roomManager.getRooms().get(roomNumber).setStatus("Occupied");
+        } else{
+            roomManager.getRooms().get(roomNumber).setStatus("Available");
+        }
+
     }
 
     public void bookRoom(int roomNumber){
@@ -27,23 +32,28 @@ public class ReservationManager implements IReservationManager {
 
         for (byte i = 0; i < guests; i++) {
 
-            Guest guest = new Guest();
+
 
             System.out.println("Qual o nome do " + (i+1) + "° hóspede.");
             String guestName = scanner.next();
-            guest.setName(guestName);
+
 
             System.out.println("Qual o telefone do " + (i+1) + "° hóspede.");
             String guestPhone = scanner.next();
-            guest.setPhoneNumber(guestPhone);
+
 
             System.out.println("Qual o CPF do " + (i+1) + "° hóspede.");
             String guestCPF = scanner.next();
-            guest.setCPF(guestCPF);
+
 
             System.out.println("Qual o email do " + (i+1) + "° hóspede.");
             String email = scanner.next();
-            guest.setEmail(email);
+
+            System.out.println("Qual o endereço do " + (i+1) + "° hóspede.");
+            String adress = scanner.next();
+
+
+            Guest guest = new Guest(guestName, guestPhone, guestCPF, email, adress);
 
             Room room = roomManager.getRooms().get(roomNumber);
             room.getGuests().add(guest);

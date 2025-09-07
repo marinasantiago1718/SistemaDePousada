@@ -1,3 +1,3 @@
 public interface PaymentProcessor {
-    public boolean processarPagamento(float value);
+    public boolean processPayment();
 }

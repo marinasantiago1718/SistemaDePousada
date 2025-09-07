@@ -2,9 +2,11 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ReservationManager resManager = new ReservationManager();
-        RoomManager roomManager = new RoomManager();
-        
+
+
+        PaymentManager pm = new PaymentManager();
+        PaymentProcessor pix = new PaymentPix("1", 200);
+        pm.managePayment(pix);
 
     }
 

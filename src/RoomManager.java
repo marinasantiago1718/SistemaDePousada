@@ -20,28 +20,30 @@ public class RoomManager implements IRoomManager {
     }
 
     @Override
-    public void listAvaiableRooms() {
+    public void listAvailableRooms() {
+
         byte avaiableRooms = 0;
         System.out.println("Quartos disponíveis:");
 
         for(Room room:rooms.values()){
             System.out.println("Quartos disponíveis:");
 
-            if(room.isAvailable()){
+            if(room.getStatus().equals("Available")){
                 System.out.println(room.getRoomNumber());
                 avaiableRooms++;
-         }
+            }
 
-        if (avaiableRooms==0){
-         System.out.println("Nenhum.");
-         }
+            if (avaiableRooms==0){
+                System.out.println("Nenhum.");
+            }
         }
     }
+
 
     @Override
     public String checkAvailability(int roomNumber) {
      Room room = rooms.get(roomNumber);
-     if(room.isAvailable()){
+     if(room.getStatus().equals("Available")){
          return "O quarto " + roomNumber + " está disponível";
      }
      return "O quarto " + roomNumber + " não está disponível";

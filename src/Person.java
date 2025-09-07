@@ -1,16 +1,16 @@
 public abstract class Person {
-    private String name;
-    private String phoneNumber;
-    private String CPF;
-    private String email;
-    private String endereco;
+    protected String name;
+    protected String phoneNumber;
+    protected String CPF;
+    protected String email;
+    protected String adress;
 
     public Person(String name, String phoneNumber, String cPF, String email, String endereco) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         CPF = cPF;
         this.email = email;
-        this.endereco = endereco;
+        this.adress = endereco;
     }
 
     public String getName() {
@@ -45,12 +45,12 @@ public abstract class Person {
         this.email = email;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
-    public String getEndereco() {
-        return this.endereco;
+    public String getAdress() {
+        return this.adress;
     }
 
     public abstract void doReservation();
