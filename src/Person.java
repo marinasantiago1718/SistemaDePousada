@@ -3,6 +3,7 @@ public abstract class Person {
     private String phoneNumber;
     private String CPF;
     private String email;
+    private String endereço;
 
 
 
@@ -37,7 +38,8 @@ public abstract class Person {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void doReservation(){
 
+    public void setEndereco(String endereço) {
+        this.endereço = endereço;
     }
 }

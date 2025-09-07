@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class CheckIn {
 
-    public LocalDateTime registrateArrival(){
+    public LocalDateTime registerArrival(){
         LocalDateTime arrivalDate = LocalDateTime.now();
         return arrivalDate;
     }
