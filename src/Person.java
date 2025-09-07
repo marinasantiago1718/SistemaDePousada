@@ -5,7 +5,13 @@ public abstract class Person {
     private String email;
     private String endereco;
 
-
+    public Person(String name, String phoneNumber, String cPF, String email, String endereco) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        CPF = cPF;
+        this.email = email;
+        this.endereco = endereco;
+    }
 
     public String getName() {
         return name;
