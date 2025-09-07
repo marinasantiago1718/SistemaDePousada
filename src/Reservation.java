@@ -9,16 +9,19 @@ public class Reservation {
     private LocalDateTime arrivalDate;
     private LocalDateTime departureDate;
 
-    public Reservation(int id, Room room, Guest guest, LocalDateTime arrivalDate, LocalDateTime departureDate) {
+    public Reservation(int id, Room room, Guest guest, LocalDateTime arrivalDate) {
         this.id = id;
         this.room = room;
         this.guest = guest;
-        this.arrivalDate = arrivalDate;
+
     }
 
-
+    public Reservation(int id) {
+        this.id = id;
+    }
 
     public float calculateValue() {
+        departureDate = LocalDateTime.now();
         Duration duration = Duration.between(arrivalDate, departureDate);
         return room.getDailyPrice()*(duration.toHours()/24f);
     }

@@ -9,6 +9,7 @@ public class ReservationManager implements IReservationManager {
 
 
 
+
     public void confirmReservation(){
 //        CheckIn checkIn = new CheckIn();
 //        arrivalDate = checkIn.registrateArrival();
