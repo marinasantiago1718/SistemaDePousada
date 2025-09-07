@@ -9,6 +9,7 @@ public class Payment implements PaymentProcessor {
 
 
     public boolean processarPagamento(float value) {
-
+        System.out.println("pagamento aprovado");
+        return true;
     }
 }
