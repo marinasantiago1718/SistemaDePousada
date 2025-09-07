@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+
 public class Employee extends Person {
 
     private String registration;
@@ -17,8 +19,10 @@ public class Employee extends Person {
 
 
 
-    public void doReservation() {
-//        Reservation reservation = new Reservation();
-//        reservation.confirmReservation();
+    public void doReservation(int id, Room room, Guest guest, LocalDateTime arrivalDate) {
+        Reservation reservation = new Reservation(id, room, guest, arrivalDate);
+        ReservationManager rm = new ReservationManager();
+
+        rm.addReservation(reservation);
     }
 }
