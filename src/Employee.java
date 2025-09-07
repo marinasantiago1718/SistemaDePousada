@@ -1,8 +1,8 @@
 public class Employee extends Person {
 
     private String registration;
-//    private CheckIn checkIn;
-//    private CheckIn checkOut;
+    private CheckIn checkIn = new CheckIn();
+    private CheckOut checkOut = new CheckOut();
 
     public String getRegistration() {
         return registration;
@@ -15,6 +15,7 @@ public class Employee extends Person {
 
     @Override
     public void doReservation() {
-        super.doReservation();
+//        Reservation reservation = new Reservation();
+//        reservation.confirmReservation();
     }
 }

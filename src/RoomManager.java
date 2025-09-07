@@ -3,8 +3,19 @@ import java.util.HashMap;
 public class RoomManager implements IRoomManager {
     private HashMap<Integer, Room> rooms;
 
+
     @Override
-    public void updateRoomQuantity(Room room) {
+    public void deleteRoom(int roomNumber) {
+        rooms.entrySet().removeIf(entry -> entry.getValue().getRoomNumber()==roomNumber);
+    }
+
+    @Override
+    public void updateRoom( Room room) {
+        rooms.put(room.getRoomNumber(), room);
+    }
+
+    @Override
+    public void addRoom(Room room) {
         rooms.put(room.getRoomNumber(),room) ;
     }
 
