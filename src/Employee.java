@@ -4,6 +4,10 @@ public class Employee extends Person {
     private CheckIn checkIn = new CheckIn();
     private CheckOut checkOut = new CheckOut();
 
+    public Employee(String name, String phoneNumber, String cPF, String email, String endereco) {
+        super(name, phoneNumber, cPF, email, endereco);
+    }
+
     public String getRegistration() {
         return registration;
     }
