@@ -19,8 +19,10 @@ public class RoomManager implements IRoomManager {
         rooms.put(room.getRoomNumber(),room) ;
     }
 
+
     @Override
-    public void listAvailableRooms() {
+    public void listAvaiableRooms() {
+
 
         byte avaiableRooms = 0;
         System.out.println("Quartos disponíveis:");
@@ -37,12 +39,6 @@ public class RoomManager implements IRoomManager {
                 System.out.println("Nenhum.");
             }
         }
-    }
-
-
-    @Override
-    public void listAvailableRooms() {
-
     }
 
     @Override

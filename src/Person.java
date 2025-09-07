@@ -53,5 +53,5 @@ public abstract class Person {
         return this.adress;
     }
 
-    public abstract void doReservation();
+
 }

@@ -6,10 +6,6 @@ public class Guest extends Person{
     }
 
 
-    @Override
-    public void doReservation() {
-
-    }
 
 
 }
