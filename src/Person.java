@@ -52,4 +52,6 @@ public abstract class Person {
     public String getEndereco() {
         return this.endereco;
     }
+
+    public abstract void doReservation();
 }
