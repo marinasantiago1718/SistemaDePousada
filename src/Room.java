@@ -3,23 +3,15 @@ import java.util.List;
 public class Room {
 
     private int roomNumber;
-    private byte numSingleBed;
-    private byte numDoubleBedCamaCasa;
-    private boolean status;
+    private String status = "Available";
     private List<Guest> guests;
     private float dailyPrice;
 
-    public Room(int roomNumber, byte numSingleBed, byte numDoubleBedCamaCasa, boolean status, List<Guest> guests, float dailyPrice) {
+    public Room(int roomNumber, String status, List<Guest> guests, float dailyPrice) {
         this.roomNumber = roomNumber;
-        this.numSingleBed = numSingleBed;
-        this.numDoubleBedCamaCasa = numDoubleBedCamaCasa;
         this.status = status;
         this.guests = guests;
         this.dailyPrice = dailyPrice;
-    }
-
-    public boolean isAvailable(){
-        return status==true;
     }
 
     public int getRoomNumber() {
@@ -30,27 +22,11 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
-    public byte getNumSingleBed() {
-        return numSingleBed;
-    }
-
-    public void setNumSingleBed(byte numSingleBed) {
-        this.numSingleBed = numSingleBed;
-    }
-
-    public byte getNumDoubleBedCamaCasa() {
-        return numDoubleBedCamaCasa;
-    }
-
-    public void setNumDoubleBedCamaCasa(byte numDoubleBedCamaCasa) {
-        this.numDoubleBedCamaCasa = numDoubleBedCamaCasa;
-    }
-
-    public boolean isStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -69,6 +45,4 @@ public class Room {
     public void setDailyPrice(float dailyPrice) {
         this.dailyPrice = dailyPrice;
     }
-
-
 }
