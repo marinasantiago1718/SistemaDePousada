@@ -22,16 +22,6 @@ public class Room {
         return status==true;
     }
 
-
-
-
-
-
-
-
-
-
-
     public int getRoomNumber() {
         return roomNumber;
     }

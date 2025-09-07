@@ -3,7 +3,10 @@ import java.util.Scanner;
 
 public class Reservation {
 
-
+    private int id;
+    private Room room;
+    private Guest guest;
+    private Payment payment;
     private boolean status;
     private LocalDateTime arrivalDate;
     private LocalDateTime departureDate;
