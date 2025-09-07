@@ -66,4 +66,9 @@ public class ReservationManager implements IReservationManager {
     public void updateReservation(Reservation reservation) {
 
     }
+
+    @Override
+    public void listAvalibleRooms() {
+
+    }
 }
