@@ -1,8 +1,8 @@
 import java.time.LocalDateTime;
 
 public class Attendant extends Employee{
-    public Attendant(String name, String phoneNumber, String cPF, String email, String endereco) {
-        super(name, phoneNumber, cPF, email, endereco);
+    public Attendant(String name, String phoneNumber, String cPF, String email, String endereco, String registration, ReservationManager rm) {
+        super(name, phoneNumber, cPF, email, endereco, registration, rm);
     }
 
     @Override
